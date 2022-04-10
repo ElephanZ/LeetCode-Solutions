@@ -3,21 +3,24 @@
 
 class Solution {
 public:
+    void sumTwoPrevious(stack<int> &nums) {
+        int first = nums.top();
+        nums.pop();
+
+        int second = nums.top();
+
+        nums.push(first);
+        nums.push(first + second);
+    }
+    
     int calPoints(vector<string>& ops) {
         
         stack<int> nums;
         
         for (auto operation: ops) {
             
-            if (operation == "+") {
-                int first = nums.top();
-                nums.pop();
-                
-                int second = nums.top();
-                
-                nums.push(first);
-                nums.push(first + second);
-            }
+            if (operation == "+")
+                sumTwoPrevious(nums);
             else if (operation == "D") 
                 nums.push(nums.top() * 2);
             else if (operation == "C")
