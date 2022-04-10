@@ -14,7 +14,6 @@ public:
     }
     
     int calPoints(vector<string>& ops) {
-        
         stack<int> nums;
         
         for (auto operation: ops) {
