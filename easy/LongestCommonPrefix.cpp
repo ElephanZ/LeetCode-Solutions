@@ -20,12 +20,10 @@ public:
         const int INF = numeric_limits<int>::max();
         int idx = INF;
         
-        for (int i = 1; i < strs.size(); i++) {
-            
+        for (int i = 1; i < strs.size(); i++) { 
             int lcp = get_lcp(strs[i-1], strs[i], strs[i-1].length(), strs[i].length());
             if (lcp == 0) return "";
             else idx = min(idx, lcp);
-            
         }
         
         return (idx == INF ? "" : strs[0].substr(0, idx));
