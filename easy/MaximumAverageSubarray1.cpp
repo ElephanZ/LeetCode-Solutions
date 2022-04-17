@@ -12,8 +12,6 @@ public:
         
         int maximum = sum;
         
-        cout << maximum << endl;
-        
         for (int i = k; i < n; i++) {
             sum -= nums[i-k] - nums[i];
             maximum = max(maximum, sum);
