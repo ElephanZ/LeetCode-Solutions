@@ -1,5 +1,5 @@
-// runtime: 8ms, faster than 80.34% of C++ online submissions for Valid Anagram
-// memory usage: 7.4MB, less than 45.98% of C++ online submissions for Valid Anagram
+// runtime: 8ms, faster than 82.77% of C++ online submissions for Valid Anagram
+// memory usage: 7.3MB, less than 77.97% of C++ online submissions for Valid Anagram
 
 class Solution {
 public:
